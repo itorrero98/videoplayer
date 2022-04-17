@@ -1,0 +1,5 @@
+.app-body-container {
+    display: grid;
+    grid-template-columns: 75vw 25vw;
+    grid-template-rows: auto;
+}

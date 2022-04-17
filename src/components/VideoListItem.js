@@ -1,9 +1,12 @@
 const VideoListItem = (props) => {
     const { thumbnails, channelTitle, description, title } = props.videoItem;
     return (
-        <div className="ui segment">
+        <div
+            className="ui segment"
+            onClick={() => props.onVideoSelected(props.videoItem)}
+        >
             <i src={thumbnails.default.url} alt="Video Thumbnail"></i>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <h3>{channelTitle}</h3>
             <p>{description}</p>
         </div>
