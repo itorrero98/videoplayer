@@ -1,0 +1,5 @@
+.video-item {
+    display: flex !important;
+    flex: 1;
+    flex-direction: row;
+}

@@ -1,14 +1,24 @@
+import "../css/VideoListItem.css";
+
 const VideoListItem = (props) => {
-    const { thumbnails, channelTitle, description, title } = props.videoItem;
+    const { thumbnails, description, title } = props.videoItem.snippet;
     return (
         <div
-            className="ui segment"
+            className="video-item item"
             onClick={() => props.onVideoSelected(props.videoItem)}
         >
-            <i src={thumbnails.default.url} alt="Video Thumbnail"></i>
-            <h2>{title}</h2>
-            <h3>{channelTitle}</h3>
-            <p>{description}</p>
+            <img
+                className="ui image"
+                src={thumbnails.medium.url}
+                alt={title}
+            ></img>
+            <div className="content">
+                <div href="/" className="header">
+                    {title}
+                </div>
+
+                <p>{description}</p>
+            </div>
         </div>
     );
 };
